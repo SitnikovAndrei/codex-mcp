@@ -674,7 +674,8 @@ TOOLS = {
                        "description": "Screenshots/mockups: local paths (absolute or relative to cwd) or http(s)/data URLs."},
             "model": {"type": "string", "description": "Model id (see codex_models). Sticks for later turns of the thread."},
             "effort": {"type": "string", "description": "Reasoning effort supported by the model (see codex_models)."},
-            "service_tier": {"type": "string", "description": "e.g. \"fast\" or \"default\"."},
+            "service_tier": {"type": "string", "description": "\"priority\" = Fast mode (faster, uses more quota), \"default\" = standard. "
+                                                           "Omit to keep the thread's tier (from config.toml)."},
             "summary": {"type": "string", "enum": ["auto", "concise", "detailed", "none"], "description": "Reasoning summary mode."},
             "output_schema": {"type": "object", "description": "JSON Schema the final Codex message must follow."},
             "sandbox": SANDBOX_ENUM,
